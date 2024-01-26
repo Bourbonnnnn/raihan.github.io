@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 15</title>
+    <link rel="stylesheet" href="w3.css">
+    <link href="https://fonts.cdnfonts.com/css/valorant" rel="stylesheet">
+    <script>
+        function show(name) {
+        var i;
+        var x = document.getElementsByClassName("stuff");
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+        }
+        document.getElementById(name).style.display = "block";
+        }
+    </script>
+
+    <style>
+        /*============================KEYFRAMES===========================*/
+        @keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:100%}}
+        @keyframes animatetop{from{top:-100px;opacity:0} to{top:0;opacity:1}}
+        @keyframes animatebottom{from{bottom:-200px;opacity:0} to{bottom:0;opacity:1}}    
+        @keyframes animateright{from{left:1750px;opacity:0} to{right:0;opacity:1}}
+        @keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+
+        /*===========================ZOOM===============================*/
+        .zoom {
+            filter: brightness(5%);
+            transition:transform 1s, filter 1s;
+            transform: scale(0.94);
+        }
+
+        .zoom:hover {
+            filter: drop-shadow(0px 0px 10px
+            rgba(255, 255, 255, 0.77)); 
+            transform: scale(1);
+        }
+
+        .weapon-zoom {
+            transition: transform 1s, filter 1s;
+            transform: scale(0.94);
+        }
+
+        .weapon-zoom:hover{
+            filter: drop-shadow(0px 0px 10px
+            rgba(255, 255, 255, 0.77)); 
+            transform: scale(1.1);
+            }
+        
+        /*==============================INI CSS HOME===========================*/
+
+        a {
+            margin-right: 40px;
+            }
+
+        h2 {
+            color: aliceblue;
+        }
+        
+
+        h1 {
+            font-family: 'VALORANT', sans-serif;
+            color: white;
+            font-size: 50px;
+        }
+
+        h4 {
+            color: aliceblue;
+        }
+
+        h3 {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: aliceblue;
+            font-size: 40px;
+        }
+
+        .desc { 
+            max-width: 450px;
+            max-height: auto;
+            margin-left: 100px;
+            margin-top: 40px;
+            position: relative;
+            animation: animateleft 1.6s;
+        }
+        .descc { 
+            max-width: 450px;
+            max-height: auto;
+            margin-left: 100px;
+            margin-top: 40px;
+            position: relative;
+            animation: animateleft 2.6s;
+        }
+
+        .raze {
+            width: auto;
+            height: 580px;
+            position: relative;
+            left: 60%;
+            bottom: 90%;
+            animation: animateright 3s;
+        }
+
+        /*=============================INI CSS CONTROLLER==============================*/
+        .head {
+            animation: animatebottom 2s ;
+            position: relative;
+        }
+
+        .controller {
+            color: aliceblue;
+            max-width: 450px;
+            max-height: auto;
+            margin-left: 100px;
+            margin-top: 40px;
+            position: relative;
+            animation: animateleft 2s;
+        }
+
+        .omen {
+            height: 900px;
+            width: auto;
+            position: absolute;
+            left: 54%;
+            top: 20%;
+            animation: animateright 4.5s;
+            
+        }
+
+
+        .viper {
+            margin-left: 40%;
+            animation: animateleft 4s;
+            position: relative;
+            height: 95%;
+            bottom: 20%;
+        }
+
+        /*=============================INI CSS DUELIST===============================*/
+        .duelist {
+            max-width: 450px;
+            max-height: auto;
+            left: 47%;
+            margin-top: 40px;
+            position: relative;
+            animation: animateright 2s;
+        }
+
+        .jett {
+            position: relative;
+            bottom: 48%;
+            margin-left: -16%;
+            height: 114%;
+            animation: animateleft 4s;
+        }
+
+        .reza {
+            position: absolute;
+            top: 30%;
+            left: 66%;
+            animation: animateright 5s;
+        }
+
+        /*===============================IINI CSS SENTINEL=========================*/
+        .sentinel{
+            max-width: 450px;
+            max-height: auto;
+            left: 530px;
+            margin-top: 40px;
+            position: relative;
+            animation: animateright 2s;   
+        }
+
+        .killjoy{
+            position: relative;
+            height:110%;
+            bottom: 40%;
+            animation: animateleft 3s;
+        }
+
+        .sage {
+            position: relative;
+            margin-left: 32%;
+            height: 100%;
+            bottom: 40%;
+            animation: animateleft 4s;
+        }
+
+        /*=====================================INI CSS INITIATOR====================*/
+        .initiator{
+            max-width: 450px;
+            max-height: auto;
+            margin-left: 30px;
+            margin-top: 40px;
+            position: relative;
+            animation: animateleft 2s;   
+        }
+
+        .skye {
+            position: relative;
+            left: 22%;
+            height: 100%;
+            bottom: 30%;
+            animation: animateright 3s;
+        }
+
+        /*================================INI CSS WEAPON===============================*/
+        .weapon img{
+            width: 40%;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            border: solid 1px;
+            border-radius: 10px;
+            border-color: white;
+            animation: animatebottom 2s;
+            position: relative;
+        }
+
+        .weapon :hover{
+            border: 2px solid #bd3944;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+    </style>
+
+</head>
+<body style="font-family: Arial, Gerogia, sans-serif;">
+    <div class="w3-container w3-center" style="background-color: #31304D;">
+        <h1>VALORANT</h1>
+    </div>
+
+    <div class="w3-navbar w3-card-4 w3-center" style="background-color: #bd3944;">
+        <a class="w3-bar-item w3-button" onclick="show('kesatu')">Home</a>
+        <a class="w3-bar-item w3-button" onclick="show('kedua')">Controller</a>
+        <a class="w3-bar-item w3-button" onclick="show('ketiga')">Duelist</a>
+        <a class="w3-bar-item w3-button" onclick="show('keempat')">Sentinel</a>
+        <a class="w3-bar-item w3-button" onclick="show('kelima')">Initiator</a>
+        <div class="w3-dropdown-hover">
+            <a class="w3-bar-item w3-button">Weapon</a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a class="w3-bar-item w3-button" onclick="show('pistol')">Pistol</a>
+                <a class="w3-bar-item w3-button" onclick="show('smg')">SMGS</a>
+                <a class="w3-bar-item w3-button" onclick="show('shotgun')">Shotgun</a>
+                <a class="w3-bar-item w3-button" onclick="show('rifle')">Rifle</a>
+                <a class="w3-bar-item w3-button" onclick="show('sniper')">Sniper</a>
+                <a class="w3-bar-item w3-button" onclick="show('heavy')">Heavy</a>
+            </div>
+        </div>
+        <a class="w3-bar-item w3-button" onclick="show('keenam')">Profile</a>
+    </div>
+    <div id="kesatu" class="stuff w3-border " style="background-color: #31304D; height: 700px; overflow: hidden;">
+
+        <h4 class="desc">Padukan gaya dan pengalamanmu di panggung kompetitif 
+            global. Kamu memiliski 13 ronde untuk menyerang dan mempertahankan 
+            sisimu dengan keahlian tembak-menembak sengit serta kemampuan taktis. 
+            Dengan satu nyawa per ronde, kamu harus berpikir lebih cepat daripada lawan 
+            jika ingin tetap hidup. Habisi musuh baik di mode Competitive maupun Unranked serta 
+            Deathmatch dan Spike Rush.</h4> <br><br>
+            <h4 class="descc">KREATIVITAS ADALAH SENJATA TERBAIKMU. <br><br>
+            Lebih dari sekadar senjata dan peluru, kamu akan memilih Agen bersenjatakan kemampuan yang adaptif,
+            tangkas, dan mematikan untuk membuktikan keahlian menembakmu. 
+            Sejalan dengan berbedanya kepiawaian dalam menembak, begitu pula di sini; tak akan ada Agen dengan karakteristik sama.
+        </h4>
+            
+        <img src="raze.png" class="raze">
+
+    </div>
+
+    <div id="kedua" class="w3-container stuff w3-border" style="display: none; background-color: #31304D; height: 950px; overflow: hidden;">
+        <h1 class="w3-center head">CONTROLLER</h1>
+
+        <h4 class="controller ">Controller adalah salah satu dari empat role yang dibagi menjadi agent di VALORANT . 
+            Kemampuan agent dalam role ini memungkinkan mereka membantu rekan satu tim dengan memotong penglihatan musuh, 
+            menguasai suatu area, dan memaksa musuh ke titik tersedak.
+
+            Game ini saat ini memiliki lima agent Pengendali dalam daftarnya.</h4>
+            <img src="omen.png" class=" omen zoom">
+            <img src="viper.png" class=" viper zoom">
+    </div>
+
+    <div id="ketiga" class="w3-container stuff w3-border" style="display: none; background-color: #31304D; height: 1000px; overflow: hidden;">
+        <h1 class="w3-center head">DUELIST</h1>
+        <h4 class="duelist">Duelist adalah salah satu dari empat role yang dibagi menjadi agent di VALORANT . agent dengan role ini memiliki 
+            kemampuan yang memungkinkan mereka fokus untuk menjadi orang pertama yang memasuki lokasi dan menghadapi musuh.
+            Tidak seperti kelas agent lainnya , skill utama Duelist harus diisi ulang dengan melakukan 2 kill, 
+            bukan dengan cooldown. <br>
+            Saat ini dalam game terdapat tujuh agent Duelist dalam daftarnya.
+        </h4>
+        <img src="jett.png" class="jett zoom">
+        <img src="razee.png" class="reza zoom">
+    </div>
+
+    <div id="keempat" class="w3-container stuff w3-border" style="display: none; background-color: #31304D; height: 1000px; overflow: hidden;">
+        <h1 class="w3-center head">SENTINEL</h1>
+        <h4 class="sentinel">Sentinel adalah salah satu dari empat role yang dibagi menjadi agent di VALORANT . 
+            Kemampuan agent dalam role ini fokus pada permainan bertahan, dengan penekanan pada mendukung anggota 
+            tim lainnya melalui penyediaan informasi, mengamankan lokasi, dan mencegah musuh melakukan flanking.
+            Saat ini terdapat lima agent Sentinel dalam daftarnya.
+        </h4>
+        <img src="killjoy.png" class="killjoy zoom">
+        <img src="sage.png" class="sage zoom">
+    </div>
+
+    <div id="kelima" class="w3-container stuff w3-border" style="display: none; background-color: #31304D; height: 1000px; overflow: hidden;">
+        <h1 class="w3-center head">INITIATIOR</h1>
+        <h4 class="initiator">Initiator adalah salah satu dari empat role yang dibagi menjadi Agent di VALORANT . 
+            Kemampuan Agent dalam role ini berfokus pada memulai serangan di lokasi, mengusir musuh dari tempat 
+            persembunyian dan sudut untuk membantu tim saat menyerang.
+            Saat ini terdapat enam Agent Inisiator dalam daftarnya.
+        </h4>
+        <img src="skye.png" class="zoom skye">
+        <img src="breach.png" class="zoom skye">
+    </div>
+
+    <div id="pistol" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D;">
+        <h1 class="head">Pistol</h1>
+        <div class="weapon">
+            <img src="classic.png" class="weapon-zoom">
+            <img src="Shorty.png" class="weapon-zoom">
+            <img src="frenzy.png" class="weapon-zoom">
+            <img src="ghost.png" class="weapon-zoom">
+            <img src="sheriff.png" class="weapon-zoom">
+        </div>
+    </div>
+    <div id="smg" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D; height: 700px;">
+       <h1 class="head">Sub Machine Gun</h1>
+        <div class="weapon">
+            <img src="stinger.png" class="weapon-zoom">
+            <img src="spectre.png" class="weapon-zoom">
+        </div>
+    </div>
+    <div id="shotgun" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D; height: 700px;">
+       <h1 class="head">Shotgun</h1>
+        <div class="weapon">
+            <img src="bucky.png" class="weapon-zoom">
+            <img src="judge.png" class="weapon-zoom">
+        </div>
+    </div>
+    <div id="rifle" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D;">
+       <h1 class="head">Riffle</h1>
+        <div class="weapon">
+            <img src="bulldog.png" class="weapon-zoom">
+            <img src="guardian.png" class="weapon-zoom">
+            <img src="phantom.png" class="weapon-zoom">
+            <img src="vandal.png" class="weapon-zoom">
+        </div>
+    </div>
+    <div id="sniper" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D;">
+       <h1 class="head">Sniper</h1>
+        <div class="weapon">
+            <img src="marshal.png" class="weapon-zoom">
+            <img src="outlaw.png" class="weapon-zoom">
+            <img src="operator.png" class="weapon-zoom">
+        </div>
+    </div>
+    <div id="heavy" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D; height: 700px;">
+       <h1 class="head">Heavy</h1>
+        <div class="weapon">
+            <img src="ares.png" class="weapon-zoom">
+            <img src="odin.png" class="weapon-zoom">
+        </div>
+    </div>
+    
+    <div id="keenam" class="w3-container stuff w3-border w3-center" style="display: none; background-color: #31304D;">
+        <h1 style="position: relative; animation: animatetop 2s;">Profile</h1>
+        <h2 style="animation: animateleft 1s; position: relative;">
+            Nama : Raihan Fathir Muhammad <br>
+            NIM : 10123090 <br>
+            Kelas : IF-3 <br>
+        </h2>
+        <div class="w3-container w3-border">
+            <h2 style="position: relative; animation: animateleft 2s;">
+                Berikut Akun Valorant saya. 400k Angkut.<br> 
+                Info lebih lanjut DM aja <a href="https://www.instagram.com/sbjibo/" target="_blank">@sbjibo</a><br>
+                Atau bisa DM pacar aku &#128523;<a href="https://www.instagram.com/inirfa_lgsta/" target="_blank">@inirfa_lgsta</a>
+            </h2><br>
+            <iframe src="https://tracker.gg/valorant/profile/riot/bourbon%23bozo/overview" name="iframe1" height="600px" width="1000px" style="border-radius: 10px; animation:fading 6s;">
+            </iframe>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+</html>
